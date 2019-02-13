@@ -13,7 +13,6 @@ const bcrypt = require('bcrypt');
 // require mongoose for MongoDB
 const mongoose = require("mongoose");	
 mongoose.Promise = global.Promise;
-// mongoose.connect("mongodb://localhost:27017/dogmeetup");
 mongoose.connect("mongodb://localhost/dogmeetup");
 
 // define a model
@@ -21,11 +20,10 @@ const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
 
 const userProfileSchema = new Schema({
-	user: ObjectId,
-	username: String,
-	email: String,
-	password: String,
-	confirmationpassword: String
+    user: ObjectId,
+    username: String,
+    email: String,
+    password: String
 });
 
 // create a model and instantiate it
