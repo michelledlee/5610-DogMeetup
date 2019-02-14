@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use(session({secret: "Shh, its a secret!"}));
 
 // require the router module
-var router = require('./index.js');
+var index = require('./index.js');
 app.use('/index', index);
 
 // to direct our files
